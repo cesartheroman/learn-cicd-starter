@@ -10,7 +10,7 @@ func TestGetAPIKey(t *testing.T) {
 	h := http.Header{
 		"Authorization": []string{"ApiKey 123"},
 	}
-	want := "hi123"
+	want := "123"
 	got, err := GetAPIKey(h)
 	if !reflect.DeepEqual(want, got) || err != nil {
 		t.Fatalf("expected: %v, got: %v, error: %v", want, got, err)
